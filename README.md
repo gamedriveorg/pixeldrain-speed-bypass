@@ -1,33 +1,39 @@
-## Pixeldrain Bypass Limit
+# ⚡ Pixeldrain Bypass Limit
+**A high-performance userscript to circumvent download restrictions using multi-proxy automation.**
 
-### Install
-You can install the extension using this [link](https://pixeldrain-bypass.gamedrive.org/pixeldrain-bypass.user.js)
+[![Install](https://img.shields.io/badge/Install-Userscript-orange?style=for-the-badge&logo=tampermonkey)](https://pixeldrain-bypass.gamedrive.org/pixeldrain-bypass.user.js)
+[![Homepage](https://img.shields.io/badge/Homepage-GameDrive.org-blue?style=for-the-badge)](https://pixeldrain-bypass.gamedrive.org/)
 
-**Description**  
-Bypass Pixeldrain download limits using multi-proxy API support (cached 24h). Supports individual file downloads, gallery downloads, and ZIP downloads for entire galleries. Adds vertical **Download DL all files** and **Show DL all files** buttons on gallery pages. Bypass links open in new tabs and can be copied or saved as text files.
+---
 
-**Features**
-- Bypass download limits via API-provided proxies (randomized).
-- 24‑hour proxy list cache to improve reliability.
-- Single file (`/u/`) and gallery (`/l/`) support.
-- Download entire gallery as ZIP via proxy (`/zip/<id>`).
-- Vertical gallery buttons: ⬇️ **Download DL all files** and 🔗 **Show DL all files**.
-- Popup to copy or save all bypass URLs.
-- Opens bypass links in new tabs (or via GM_openInTab when available).
-- Works with common Pixeldrain domains and CDN embeds.
+### 🚀 Key Features
+* **Seamless Bypass:** Automates the use of API-provided proxies to skip Pixeldrain’s daily download limits.
+* **Dual Mode Support:** Optimized for both individual file pages (`/u/`) and gallery lists (`/l/`).
+* **Bulk Downloading:** Generate proxy-protected ZIP files for entire galleries with one click.
+* **Link Extraction:** Integrated popup to "Show all files," allowing you to copy direct bypass URLs or export them as a `.txt` file.
+* **Performance Caching:** Proxies are cached for 24 hours in `localStorage` to ensure instant button loading and stability.
 
-**Instructions**
-1. Install in Tampermonkey or a compatible userscript manager.
-2. Open a Pixeldrain file page (`/u/<id>`) or gallery page (`/l/<id>`).
-3. Click **Download Bypass** to open the bypassed file in a new tab.
-4. On gallery pages, use **Download DL all files** to get the ZIP, or **Show DL all files** to view/copy/save individual bypass links.
-5. Use the popup buttons to copy links to clipboard or save them as a `.txt` file.
+---
 
-**Notes**
-- Proxy list is fetched from an API and cached in `localStorage` for 24 hours. You can clear localStorage to force an immediate refresh.
-- The script prefers `GM_openInTab` if available; otherwise it falls back to `window.open`.
-- No personal data is collected by the script.
+### 🛠 Installation & Usage
+1.  **Requirement:** Install [Tampermonkey](https://www.tampermonkey.net/) or [Violentmonkey](https://violentmonkey.github.io/).
+2.  **Installation:** Click the **Install Userscript** badge above.
+3.  **Operation:**
+    * Navigate to any Pixeldrain URL.
+    * Click **Download Bypass** on file pages.
+    * On gallery pages, use the vertical sidebar buttons to **Download ZIP** or **Extract Links**.
 
-**Author / Support**
-- Author: GameDrive.Org  
-- Homepage: https://pixeldrain-bypass.gamedrive.org/
+---
+
+### 📝 Technical Details
+| Feature | Description |
+| :--- | :--- |
+| **Network** | Uses `GM_xmlhttpRequest` for cross-origin API proxy fetching. |
+| **Tab Management** | Prefers `GM_openInTab` to prevent popup blockers. |
+| **Caching** | 24-hour TTL; clear browser local storage to force a proxy refresh. |
+| **Privacy** | Zero data collection; links are handled locally on your machine. |
+
+---
+
+**Author:** [GameDrive.Org](https://pixeldrain-bypass.gamedrive.org/)  
+**Support:** For updates and issues, visit the official homepage.
